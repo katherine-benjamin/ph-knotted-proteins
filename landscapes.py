@@ -87,7 +87,7 @@ class PersistenceLandscape:
             return 0
         return linear_interpolate(X[i], X[i+1], Y[i], Y[i+1], x)
 
-    def plot(self, colors = None, show_zero = False, **kwargs):
+    def plot(self, colors = None, linewidths = None, max_k = None, show_zero = False, **kwargs):
         """Plot the persistence landscape.
 
         Args:
@@ -99,11 +99,16 @@ class PersistenceLandscape:
         Returns:
             A matplotlib figure containing the landscape plot.
         """
+        if colors is None:
+            colors = [None] * self.max_k()
+        if linewidths is None:
+            linewidths = [None] * self.max_k()
+
         fig, ax = plt.subplots(1)
 
         left_bound = self.X(1)[0]
         right_bound = self.X(1)[-1]
-        for k in range(1, self.max_k() + 1):
+        for k in range(1, (self.max_k() if max_k is None else max_k) + 1):
             X_k = list(self.X(k))
             Y_k = list(self.Y(k))
             if show_zero:
@@ -123,10 +128,7 @@ class PersistenceLandscape:
                         Y_k.insert(i+1, -1)
                         i += 2
                     i += 1
-            if colors is not None:
-                ax.plot(X_k, Y_k, color=colors[k-1], **kwargs)
-            else:
-                ax.plot(X_k, Y_k, **kwargs)
+            ax.plot(X_k, Y_k, color=colors[k-1], linewidth=linewidths[k-1], **kwargs)
         if not show_zero:
             ax.set_ylim(bottom=0)
         return fig, ax
