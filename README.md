@@ -8,13 +8,18 @@ It contains the data analysed in the paper, as well as the code used to generate
 
 This repository already contains the data produced by the following steps, so it is not necessary to run them again unless desired.
 
-1. Protein chain coordinates are downloaded from KnotProt and interpolated with the script `chains.py`. To generate the 6-fold interpolated coordinates used in the paper, one would run
+1. Protein chain coordinates are downloaded from KnotProt and interpolated with the script `chains.py`. To generate the 6-fold interpolated coordinates used in the paper, one would run  
 
-`python3 chains.py trefoil_list.csv 6`
+   `python3 chains.py trefoil_list.csv 6`
 
-2. Persistence diagrams corresponding to each of these chains are then generated with the script `run_ripser.py`. By default, this requires Ripser to be installed in the directory `./ripser/`, but this can be amended by editing the variable `RIPSER` in the script. To generate the diagrams corresponding to the 6-fold interpolated protein chains, one would run
+2. Persistence diagrams corresponding to each of these chains are then generated with the script `run_ripser.py`. By default, this requires Ripser to be installed in the directory `./ripser/`, but this can be amended by editing the variable `RIPSER` in the script. To generate the diagrams corresponding to the 6-fold interpolated protein chains, one would run  
 
-`python3 run_ripser.py trefoil_list.csv 6 1`,
+   `python3 run_ripser.py trefoil_list.csv 6 1`,  
 
-where the `1` specifies the maximal degree of homology computed.
+   where the `1` specifies the maximal degree of homology computed.
 
+3. Persistence landscapes corresponding to each of these persistence diagrams are then generated with the script `generate_landscapes.py`. Running
+
+    `python3 generate_landscapes.py 6`
+    
+    will generate landscapes corresponding to every diagram stored in the `diagrams` directory of the specified interpolation.
