@@ -4,6 +4,23 @@ This repository is a companion to the paper:
 
 It contains the data analysed in the paper, as well as the code used to generate those data and to produce the accompanying figures.
 
+## Pipeline
+
+Beginning from protein coordinate data obtained from KnotProt and the PDB, the computational pipeline applied in the paper is as follows.
+
+1. For each protein chain, add five linearly interpolated points between each successive pair of alpha carbon coordinates.
+2. Compute first persistent homology of the Viertoris-Rips complexes associated to these interpolated chains:
+
+    a) For trefoil-knotted chains, generate persistence diagrams with Ripser.
+    
+    b) For AOTCase and OTCase chains, generate both persistence diagrams and corresponding representative homology generators with Eirene.
+    
+3. Compute persistence landscapes from these persistence diagrams.
+4. Compute distance matrices on trefoil-knotted chains using Wasserstein and landscape distances, and generate two-dimensional Isomap embeddings from these.
+6. Perform statistical tests on landscapes corresponding to trefoil-knotted proteins.
+
+Steps 1 and 2 are standard, and we include the output. This repository contains the code required to complete the remaining steps.
+
 ## Data
 
 The repository contains four types of data. They are stored in the `data` subdirectory.
