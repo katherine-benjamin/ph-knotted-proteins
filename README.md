@@ -35,7 +35,7 @@ Interpolated chains are stored in the `./data/chains/interpolated_x6/` subdirect
 
 We make a distinction between diagrams used for statistical analysis (generated with Ripser), and those used to study representatives (generated with Eirene). These correspond to the two main subsections in the results section of the paper.
 
-The former are stored in `./data/validation/diagrams/interpolated_x6/` (to make clear that they are generated from the *interpolated* coordinates). For example, the degree-one persistence diagram corresponding to the 3KZK_A chain is stored in `./data/diagrams/interpolated_x6/3kzk_A_1.txt`.
+The former are stored in `./data/validation/diagrams/`. For example, the degree-one persistence diagram corresponding to the 3KZK_A chain is stored in `./data/validation/diagrams/3kzk_A_1.txt`.
 
 The latter are stored in `./data/representatives/diagrams/`. For example, the diagram corresponding to 3KZK_A is stored in `./data/representatives/diagrams/3kzk_A.txt`. We note that the only difference between these two diagrams is the order in which the features are presented.
 
