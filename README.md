@@ -47,7 +47,7 @@ Landscapes are stored in the `.lan` format specified in [the paper of Bubenik an
 
 We again make a distinction between the two sections.
 
-Landscapes for the first section are stored in `./data/validation/landscapes/interpolated_x6/`. For example, the landscape corresponding to the persistence diagram for 3KZK_A is stored in `./data/validation/landscapes/interpolated_x6/3kzk_A_1.lan`.
+Landscapes for the first section are stored in `./data/validation/landscapes/`. For example, the landscape corresponding to the persistence diagram for 3KZK_A is stored in `./data/validation/landscapes/3kzk_A_1.lan`.
 
 Landscapes for the second section are stored in `./data/representatives/landscapes/`. Here, the landscape corresponding to the persistence diagram for 3KZK_A may be found in `./data/representatives/landscapes/3kzk_A.lan`.
 
