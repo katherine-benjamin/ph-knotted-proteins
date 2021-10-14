@@ -35,7 +35,7 @@ Interpolated chains are stored in the `./data/chains/interpolated_x6/` subdirect
 
 We make a distinction between diagrams used for statistical analysis (generated with Ripser), and those used to study representatives (generated with Eirene). These correspond to the two main subsections in the results section of the paper.
 
-The former are stored in `./data/validation/diagrams/`. For example, the degree-one persistence diagram corresponding to the 3KZK_A chain is stored in `./data/validation/diagrams/3kzk_A_1.txt`.
+The former are stored in `./data/validation/diagrams/`. For example, the degree-one persistence diagram corresponding to the 3KZK_A chain is stored in `./data/validation/diagrams/3kzk_A.txt`.
 
 The latter are stored in `./data/representatives/diagrams/`. For example, the diagram corresponding to 3KZK_A is stored in `./data/representatives/diagrams/3kzk_A.txt`. We note that the only difference between these two diagrams is the order in which the features are presented.
 
@@ -47,7 +47,7 @@ Landscapes are stored in the `.lan` format specified in [the paper of Bubenik an
 
 We again make a distinction between the two sections.
 
-Landscapes for the first section are stored in `./data/validation/landscapes/`. For example, the landscape corresponding to the persistence diagram for 3KZK_A is stored in `./data/validation/landscapes/3kzk_A_1.lan`.
+Landscapes for the first section are stored in `./data/validation/landscapes/`. For example, the landscape corresponding to the persistence diagram for 3KZK_A is stored in `./data/validation/landscapes/3kzk_A.lan`.
 
 Landscapes for the second section are stored in `./data/representatives/landscapes/`. Here, the landscape corresponding to the persistence diagram for 3KZK_A may be found in `./data/representatives/landscapes/3kzk_A.lan`.
 
