@@ -37,9 +37,9 @@ We make a distinction between diagrams used for statistical analysis (generated 
 
 The former are stored in `./data/validation/diagrams/`. For example, the degree-one persistence diagram corresponding to the 3KZK_A chain is stored in `./data/validation/diagrams/3kzk_A.txt`.
 
-The latter are stored in `./data/representatives/diagrams/`. For example, the diagram corresponding to 3KZK_A is stored in `./data/representatives/diagrams/3kzk_A.txt`. We note that the only difference between these two diagrams is the order in which the features are presented.
+The latter are stored in `./data/generators/diagrams/`. For example, the diagram corresponding to 3KZK_A is stored in `./data/generators/diagrams/3kzk_A.txt`. We note that the only difference between these two diagrams is the order in which the features are presented.
 
-For the latter case, we also store representative generators for homology classes as output by Eirene. These may be found in `.data/representatives/reps/`. For example, the representative generator for the 13th feature of the 3KZK_A diagram is stored in `.data/representatives/reps/3kzk_A_representative_13.txt`.
+For the latter case, we also store representative generators for homology classes as output by Eirene. These may be found in `./data/generates/reps/`. For example, the representative generator for the 13th feature of the 3KZK_A diagram is stored in `.data/generators/reps/3kzk_A_representative_13.txt`.
 
 ### Persistence landscapes
 
@@ -49,7 +49,7 @@ We again make a distinction between the two sections.
 
 Landscapes for the first section are stored in `./data/validation/landscapes/`. For example, the landscape corresponding to the persistence diagram for 3KZK_A is stored in `./data/validation/landscapes/3kzk_A.lan`.
 
-Landscapes for the second section are stored in `./data/representatives/landscapes/`. Here, the landscape corresponding to the persistence diagram for 3KZK_A may be found in `./data/representatives/landscapes/3kzk_A.lan`.
+Landscapes for the second section are stored in `./data/generators/landscapes/`. Here, the landscape corresponding to the persistence diagram for 3KZK_A may be found in `./data/generators/landscapes/3kzk_A.lan`.
 
 ### Distance matrices
 
