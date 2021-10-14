@@ -3,19 +3,17 @@ import gudhi.hera
 import numpy as np
 import pandas as pd
 
-BARCODE_FILE = './data/diagrams/interpolated_x{}/{}_{}.txt'
+BARCODE_FILE = './data/diagrams/{}_1.txt'
 
-def load_barcode(chain, interpolation, dim):
-	return np.loadtxt(BARCODE_FILE.format(interpolation, chain, dim))
+def load_barcode(chain):
+	return np.loadtxt(BARCODE_FILE.format(chain))
 
 def main():
 	csv = sys.argv[1]
-	interpolation = sys.argv[2]
-	dim = sys.argv[3]
-	output_file = sys.argv[4]
+	output_file = sys.argv[2]
 	df = pd.read_csv(csv)
 	chains = df['Chain']
-	barcodes = [load_barcode(chain, interpolation, dim) for chain in chains]
+	barcodes = [load_barcode(chain) for chain in chains]
 
 	N = len(chains)
 	dm = np.zeros((N,N))
