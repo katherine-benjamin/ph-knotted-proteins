@@ -53,7 +53,7 @@ Landscapes for the second section are stored in `./data/generators/landscapes/`.
 
 ### Distance matrices
 
-We have precomputed all three distance matrices used in our analysis. For the validation section, the Wasserstein distance matrix is stored in `./data/validation/wass_dm.txt` and the landscape distance matrix is stored in `./data/validation/landscape_dm.txt`. For the generators section, the distance matrix is stored in `./data/generators/truncated_dm.txt'.
+We have precomputed all three distance matrices used in our analysis. For the validation section, the Wasserstein distance matrix is stored in `./data/validation/wass_dm.txt` and the landscape distance matrix is stored in `./data/validation/landscape_dm.txt`. For the generators section, the distance matrix is stored in `./data/generators/truncated_dm.txt`.
 
 ## Usage
 
