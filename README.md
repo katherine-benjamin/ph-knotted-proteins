@@ -17,7 +17,7 @@ Beginning from protein coordinate data obtained from KnotProt and the PDB, the c
     
 3. Compute persistence landscapes from these persistence diagrams.
 4. Compute distance matrices on trefoil-knotted chains using Wasserstein and landscape distances, and generate two-dimensional Isomap embeddings from these.
-6. Perform statistical tests on landscapes corresponding to trefoil-knotted proteins.
+5. Perform statistical tests on landscapes corresponding to trefoil-knotted proteins.
 
 Steps 1 and 2 are standard, and we include their output. This repository contains the code required to complete the remaining steps.
 
@@ -57,4 +57,9 @@ We have precomputed all three distance matrices used in our analysis. For the va
 
 ## Usage
 
+### Persistence landscapes
+
+This repository contains a (slightly modified) version of the [Pysistence Landscapes package](https://gitlab.com/kfbenjamin/pysistence-landscapes) maintained by one of the authors. This can be found in the file `landscapes.py` in the root directory. We use this both to generate landscapes from diagrams, and later on to perform analysis and generate figures.
+
+To generate landscapes, we provide the script `generate_landscapes.py`. This takes as arguments an input directory and an output directory. Then, for each persistence diagram in the input directory (and we assume that the input directory contains only persistence diagrams), it produces a corresponding persistence landscape, and saves it in the output directory.
 
