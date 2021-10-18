@@ -63,3 +63,7 @@ This repository contains a (slightly modified) version of the [Pysistence Landsc
 
 To generate landscapes, we provide the script `generate_landscapes.py`. This takes as arguments an input directory and an output directory. Then, for each persistence diagram in the input directory (and we assume that the input directory contains only persistence diagrams), it produces a corresponding persistence landscape, and saves it in the output directory.
 
+To complete Step 3 from the above pipeline, then, requires two commands:
+
+`python generate_landscapes.py ./data/validation/diagrams/ ./data/validation/landscapes/`
+`python generate_landscapes.py ./data/generators/diagrams/ ./data/generators/landscapes/`
