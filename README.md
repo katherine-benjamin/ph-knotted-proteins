@@ -49,7 +49,7 @@ The former are stored in `./data/validation/diagrams/`. For example, the degree-
 
 The latter are stored in `./data/generators/diagrams/`. For example, the diagram corresponding to 3KZK_A is stored in `./data/generators/diagrams/3kzk_A.txt`. We note that the only difference between these two diagrams is the order in which the features are presented.
 
-For the latter case, we also store representative generators for homology classes as output by Eirene. These may be found in `./data/generates/reps/`. For example, the representative generator for the 13th feature of the 3KZK_A diagram is stored in `.data/generators/reps/3kzk_A_representative_13.txt`.
+For the latter case, we also store representative generators for homology classes as output by Eirene. These may be found in `./data/generators/reps/`. For example, the representative generator for the 13th feature of the 3KZK_A diagram is stored in `.data/generators/reps/3kzk_A_representative_13.txt`.
 
 ### Persistence landscapes
 
