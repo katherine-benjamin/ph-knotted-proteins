@@ -11,9 +11,9 @@ Beginning from protein coordinate data obtained from KnotProt and the PDB, the c
 1. For each protein chain, add five linearly interpolated points between each successive pair of alpha carbon coordinates.
 2. Compute first persistent homology of the Vietoris-Rips complexes associated to these interpolated chains:
 
-    a) For trefoil-knotted chains, generate persistence diagrams with Ripser.
+    a) For trefoil-knotted chains, generate persistence diagrams with [Ripser](https://github.com/Ripser/ripser).
     
-    b) For AOTCase and OTCase chains, generate both persistence diagrams and corresponding representative homology generators with Eirene.
+    b) For AOTCase and OTCase chains, generate both persistence diagrams and corresponding representative homology generators with [Eirene](https://github.com/Eetion/Eirene.jl).
     
 3. Compute persistence landscapes from these persistence diagrams.
 4. Compute distance matrices on trefoil-knotted chains using Wasserstein and landscape distances, and generate two-dimensional Isomap embeddings from these.
