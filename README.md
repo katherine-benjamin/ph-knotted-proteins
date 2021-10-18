@@ -65,6 +65,7 @@ To generate landscapes, we provide the script `generate_landscapes.py`. This tak
 
 To complete Step 3 from the above pipeline, then, requires two commands:
 
-`python generate_landscapes.py ./data/validation/diagrams/ ./data/validation/landscapes/`
-
-`python generate_landscapes.py ./data/generators/diagrams/ ./data/generators/landscapes/`
+```
+python generate_landscapes.py ./data/validation/diagrams/ ./data/validation/landscapes/
+python generate_landscapes.py ./data/generators/diagrams/ ./data/generators/landscapes/
+```
