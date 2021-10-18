@@ -43,7 +43,7 @@ For the latter case, we also store representative generators for homology classe
 
 ### Persistence landscapes
 
-Landscapes are stored in the `.lan` format specified in [the paper of Bubenik and Dłotko](https://www.sciencedirect.com/science/article/pii/S0747717116300104).
+Landscapes are stored in the `.lan` format specified in [the paper of Bubenik and Dłotko](https://www.sciencedirect.com/science/article/pii/S0747717116300104). They are therefore compatible with [The Persistence Landscpae Toolbox](https://www2.math.upenn.edu/~dlotko/persistenceLandscape.html).
 
 We again make a distinction between the two sections.
 
