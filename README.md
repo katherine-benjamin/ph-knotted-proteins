@@ -2,7 +2,17 @@
 
 This repository is a companion to the paper:
 
-It contains the data analysed in the paper, as well as the code used to generate those data and to produce the accompanying figures.
+It contains the data analysed in the paper, as well as the Python code used to generate those data and to produce the accompanying figures.
+
+## Dependencies
+
+Almost all of the code in this repository depends on [Numpy](https://numpy.org) and [Pandas](https://pandas.pydata.org).
+
+Computing Wasserstein distances requires [GUDHI](https://gudhi.inria.fr).
+
+Computing Isomap embeddings requires [scikit-learn](https://scikit-learn.org/stable/).
+
+Generating almost all of the figures requires both [matplotlib](https://matplotlib.org) and [seaborn](https://seaborn.pydata.org).
 
 ## Pipeline
 
@@ -72,4 +82,11 @@ python generate_landscapes.py ./data/generators/diagrams/ ./data/generators/land
 
 ### Distance matrices
 
-We provide a single script, `generate_distances.py` which will output the three distance matrices we use in the paper. For the first distance matrix, computed on persistence diagrams, it requires [GUDHI](https://gudhi.inria.fr). If one of these distances is not required, for instance because the user only wishes to work with one subsection of the paper, then the relevant lines are easily removed from the script.
+For Step 4 we provide a script, `generate_distances.py`, which will output the three distance matrices we use in the paper. For the first distance matrix, computed on persistence diagrams, it requires [GUDHI](https://gudhi.inria.fr). If one of these distances is not required, for instance because the user only wishes to work with one subsection of the paper, then the relevant lines are easily removed from the script.
+
+The isomap embeddings can then be computed with the `generate_isomap.py` script. This depends on [scikit-learn](https://scikit-learn.org/stable/). Generating both isomap embeddings requires two commands:
+
+```
+python generate_isomap.py ./data/validation/wass_dm.txt ./data/validation/wass_iso.txt
+python generate_isomap.py ./data/validation/landscape_dm.txt ./data/validation/landscape_iso.txt
+```
