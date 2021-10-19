@@ -80,13 +80,17 @@ python generate_landscapes.py ./data/validation/diagrams/ ./data/validation/land
 python generate_landscapes.py ./data/generators/diagrams/ ./data/generators/landscapes/
 ```
 
-### Distance matrices
+### Distance matrices and embeddings
 
 For Step 4 we provide a script, `generate_distances.py`, which will output the three distance matrices we use in the paper. For the first distance matrix, computed on persistence diagrams, it requires [GUDHI](https://gudhi.inria.fr). If one of these distances is not required, for instance because the user only wishes to work with one subsection of the paper, then the relevant lines are easily removed from the script.
 
-The isomap embeddings can then be computed with the `generate_isomap.py` script. This depends on [scikit-learn](https://scikit-learn.org/stable/). Generating both isomap embeddings requires two commands:
+The Isomap embeddings can then be computed with the `generate_isomap.py` script. This depends on [scikit-learn](https://scikit-learn.org/stable/). Generating both isomap embeddings requires two commands:
 
 ```
 python generate_isomap.py ./data/validation/wass_dm.txt ./data/validation/wass_iso.txt
 python generate_isomap.py ./data/validation/landscape_dm.txt ./data/validation/landscape_iso.txt
 ```
+
+### Figures
+
+We provide a notebook which generates a large proportion of the figures. It depends on matplotlib and seaborn.
