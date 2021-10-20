@@ -91,6 +91,18 @@ python generate_isomap.py ./data/validation/wass_dm.txt ./data/validation/wass_i
 python generate_isomap.py ./data/validation/landscape_dm.txt ./data/validation/landscape_iso.txt
 ```
 
+### Statistical tests
+
+In the paper, we run permutation tests to detect differences between sequence homology clusters of trefoil-knotted proteins. We provide the `permutation_test.py` script to facilitate this. It takes an input the representatives of two sequence homology clusters, as well as a number of repetitions, and ouputs an approximate p-value.
+
+For example, to compare the 3ZNC and 6RQQ clusters with 10000 samples (as we do in the paper), one would run
+
+```
+python permutation_test.py 3ZNC 6RQQ 10000
+
+```
+and, after a while, a p-value will be returned.
+
 ### Figures
 
 We provide a notebook which generates a large proportion of the figures. It depends on matplotlib and seaborn.
