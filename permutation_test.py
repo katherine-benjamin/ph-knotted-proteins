@@ -3,11 +3,11 @@ import random
 import landscapes as pl
 import pandas as pd
 
-LANDSCAPE_FILE = './data/validation/landscapes/{}.lan'
+LANDSCAPE_FILE = './data/validation/landscapes/interpolated_x{}/{}.lan'
 
-def get_landscapes(df, representative):
+def get_landscapes(df, representative, interpolation):
     chains = df[df.Representative == representative].Chain
-    return [pl.load(LANDSCAPE_FILE.format(chain)) for chain in chains]
+    return [pl.load(LANDSCAPE_FILE.format(interpolation, chain)) for chain in chains]
 
 def permutation_test(sample1, sample2, reps):
     
@@ -65,12 +65,13 @@ def main():
 
     rep1 = sys.argv[1]
     rep2 = sys.argv[2]
-    repititions = int(sys.argv[3])
+    repetitions = int(sys.argv[3])
+    interpolation = sys.argv[4]
 
-    landscapes1 = get_landscapes(trefoil_df, rep1)
-    landscapes2 = get_landscapes(trefoil_df, rep2)
+    landscapes1 = get_landscapes(trefoil_df, rep1, interpolation)
+    landscapes2 = get_landscapes(trefoil_df, rep2, interpolation)
 
-    t = permutation_test(landscapes1, landscapes2, repititions)
+    t = permutation_test(landscapes1, landscapes2, repetitions)
 
     print("p-value: {}".format(t))
 
