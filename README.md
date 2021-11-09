@@ -10,7 +10,7 @@ Almost all of the code in this repository depends on [Numpy](https://numpy.org) 
 
 Computing Wasserstein distances requires [GUDHI](https://gudhi.inria.fr).
 
-Computing Isomap embeddings requires [scikit-learn](https://scikit-learn.org/stable/).
+Computing Isomap embeddings and silhouette coefficients requires [scikit-learn](https://scikit-learn.org/stable/).
 
 Generating almost all of the figures requires both [matplotlib](https://matplotlib.org) and [seaborn](https://seaborn.pydata.org).
 
@@ -31,6 +31,8 @@ Beginning from protein coordinate data obtained from KnotProt and the PDB, the c
 4. Compute distance matrices on trefoil-knotted chains using Wasserstein and landscape distances, and generate two-dimensional Isomap embeddings from these.
 5. Perform statistical tests on landscapes corresponding to trefoil-knotted proteins.
 
+In addition, we repeat steps 2-4 on uninterpolated point clouds with varying levels of added Gaussian noise.
+
 Steps 1 and 2 are standard, and we include their output. This repository contains the code required to complete the remaining steps.
 
 ## Data
@@ -39,7 +41,9 @@ The repository contains four types of data. They are stored in the `data` subdir
 
 ### Point clouds
 
-Coordinates for protein chains are stored as `.xyz` files in `./data/chains/`. We store chains by their level of interpolation. So, d-interpolated chains are stored in `./data/chains/interpolated_xd/`. Uninterpolated chains are treated as being 1-interpolated. So, for example, the uninterpolated coordinates of the 3KZK_A chain are stored in `./data/chains/interpolated_x1/3kzk_A.xyz`. Meanwhile, the file `./data/chains/interpolated_x6/3kzk_A_x6.xyz` is the result of adding 5 equidistant, linearly interpolated points between each successive pair of coordinates in `./data/chains/interoplated_x1/3kzk_A.xyz`.
+Coordinates for protein chains are stored as `.xyz` files in `./data/chains/`. We store chains by their level of interpolation. So, d-interpolated chains are stored in `./data/chains/interpolated_x{d}/`. Uninterpolated chains are treated as being 1-interpolated. So, for example, the uninterpolated coordinates of the 3KZK_A chain are stored in `./data/chains/interpolated_x1/3kzk_A.xyz`. Meanwhile, the file `./data/chains/interpolated_x6/3kzk_A_x6.xyz` is the result of adding 5 equidistant, linearly interpolated points between each successive pair of coordinates in `./data/chains/interoplated_x1/3kzk_A.xyz`.
+
+Where noisy chains have been generated, we store them in further subdirectories. For example, the uninterpolated 3kzk chain with added Gaussian noise (sigma=0.1) is located in `./data/chains/interpolated_x1/noise_v0.1/3kzk_A.xyz`.
 
 ### Persistence diagrams
 
@@ -51,6 +55,8 @@ The latter are stored in `./data/generators/diagrams/`. For example, the diagram
 
 For the latter case, we also store representative generators for homology classes as output by Eirene. These may be found in `./data/generators/reps/`. For example, the representative generator for the 13th feature of the d-interpolated 3KZK_A diagram is stored in `.data/generators/reps/interpolated_xd/3kzk_A_representative_13.txt`.
 
+Once again, when noise is added the corresponding diagrams can be found in appropriate subdirectories.
+
 ### Persistence landscapes
 
 Landscapes are stored in the `.lan` format specified in [the paper of Bubenik and Dłotko](https://www.sciencedirect.com/science/article/pii/S0747717116300104). They are therefore compatible with [The Persistence Landscape Toolbox](https://www2.math.upenn.edu/~dlotko/persistenceLandscape.html).
@@ -61,9 +67,13 @@ Landscapes for the first section are stored in `./data/validation/landscapes/`. 
 
 Landscapes for the second section are stored in `./data/generators/landscapes/`. Here, the landscape corresponding to the persistence diagram for d-interpolated 3KZK_A may be found in `./data/generators/landscapes/interpolated_xd/3kzk_A.lan`.
 
+Landscapes generated from noisy input are again stored in subdirectories.
+
 ### Distance matrices
 
 We have precomputed all three distance matrices used in our analysis. For the validation section, the Wasserstein distance matrix is stored in `./data/validation/wass_dm_x6.txt` and the landscape distance matrix is stored in `./data/validation/landscape_dm_x6.txt`. For the generators section, the distance matrix is stored in `./data/generators/truncated_dm_x6.txt`.
+
+We also store distance matrices corresponding to noisy input data. For example, the landscape distance matrix corresponding to Gaussian noise with sigma=0.1 is stored in `./data/validation/landscape_dm_x6_v0.1.txt`.
 
 ## Usage
 
