@@ -25,12 +25,30 @@ def convert(segs):
         else:
             rep.append(x)
         # update bridges
-        if y != x+1 and x != y+1:
-            bridges.append([x,y])
+        # if y != x+1 and x != y+1:
+        #     bridges.append([x,y])
     # add the first 0-simplex back to complete the loop
     rep.append(rep[0])
     # check for one last bridge
     x, y = rep[-2], rep[-1]
     if y != x+1 and x != y+1:
         bridges.append([x,y])
-    return rep, bridges
+    return rep
+
+# removes bridges from rep and returns a list of the resulting contiguous 
+# components as well as a list of bridges
+# [415, 416, 252, 253, 415] becomes 
+# [[415, 416], [252, 253]], [[416,252], [253,415]]
+def split(rep):
+    splits = []
+    bridges = []
+    breaks = 0
+    for i, (x,y) in enumerate(zip(rep, rep[1:])):
+        if y != x+1 and x != y+1:
+            bridges.append([x,y])
+            seg = rep[breaks:i+1]
+            splits.append(seg)
+            breaks = i+1
+    if breaks < len(rep) - 1:
+        splits.append(rep[breaks:])
+    return splits, bridges
