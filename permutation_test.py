@@ -3,7 +3,7 @@ import random
 import landscapes as pl
 import pandas as pd
 
-LANDSCAPE_FILE = './data/validation/landscapes/interpolated_x{}/{}.lan'
+LANDSCAPE_FILE = './data/validation/landscapes/interpolated_x{}/{}_1.lan'
 
 def get_landscapes(df, representative, interpolation):
     chains = df[df.Representative == representative].Chain
@@ -31,7 +31,7 @@ def permutation_test(sample1, sample2, reps):
     # We don't shuffle to start, since we want to start by recording
     # the actual test statistic as our baseline t
     for i in range(reps):
-        if i % 10 == 0:
+        if i % 1 == 100:
             print("Test {}, {} positive trials".format(i, obs))
         # Find a shuffle that hasn't been tested before
         first_indices = frozenset(indices[:n1])
