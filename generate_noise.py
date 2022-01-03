@@ -14,7 +14,6 @@ def main():
 
     for filename in os.listdir(input_dir):
         if os.path.isfile(input_dir + filename):
-            print(filename)
             new_filename = output_dir + filename
             if not os.path.isfile(new_filename):
                 xyz = np.loadtxt(input_dir + filename)
