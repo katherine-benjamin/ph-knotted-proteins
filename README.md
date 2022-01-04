@@ -1,8 +1,6 @@
 # ph-knotted-proteins
 
-This repository is a companion to the paper:
-
-It contains the data analysed in the paper, as well as the Python code used to generate those data and to produce the accompanying figures.
+This repository is a companion to the paper "Homology of homologous knotted proteins". It contains the data analysed in the paper, as well as all novel Python code used to generate those data and to produce the accompanying figures.
 
 ## Dependencies
 
