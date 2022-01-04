@@ -1,3 +1,5 @@
+"""Helper functions for processing Eirene generators"""
+
 # segs is a list of 1-simplices making up the chain
 # we'd like to transform that into a list of successive 0-simplices
 # so e.g. if segs is [[415,416], [253,252], [252,416], [253,415]]

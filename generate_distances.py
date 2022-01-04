@@ -1,3 +1,5 @@
+"""Generates distance matrices with various metrics"""
+
 import landscapes as pl
 import sys
 import gudhi.hera

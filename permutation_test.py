@@ -1,3 +1,5 @@
+"""Runs a permutation test compainrg two sequence homology classes"""
+
 import sys
 import random
 import landscapes as pl

@@ -1,3 +1,5 @@
+"""Generate persistence landscapes from a directory of persistence diagrams"""
+
 import os
 import sys
 import numpy as np

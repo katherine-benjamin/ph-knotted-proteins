@@ -1,3 +1,5 @@
+"""Perturbs the coordinates of a point cloud by Gaussian noise"""
+
 import os
 import sys
 import numpy as np
