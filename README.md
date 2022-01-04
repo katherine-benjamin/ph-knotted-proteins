@@ -96,6 +96,8 @@ python generate_landscapes.py ./data/generators/diagrams/interpolated_x6/ ./data
 
 For Step 4 we provide a script, `generate_distances.py`, which will output the three distance matrices we use in the paper. For the first distance matrix, computed on persistence diagrams, it requires [GUDHI](https://gudhi.inria.fr). If one of these distances is not required, for instance because the user only wishes to work with one subsection of the paper, then the relevant lines are easily removed from the script.
 
+The script takes one or two arguments. The first specifies the interpolation used. The second is optional, and if included specifies the level of noise used.
+
 The Isomap embeddings can then be computed with the `generate_isomap.py` script. This depends on [scikit-learn](https://scikit-learn.org/stable/). Generating both isomap embeddings requires two commands:
 
 ```
