@@ -2,6 +2,8 @@
 
 This repository is a companion to the paper "Homology of homologous knotted proteins". It contains the data analysed in the paper, as well as all novel Python code used to generate those data and to produce the accompanying figures.
 
+[![DOI](https://zenodo.org/badge/415842293.svg)](https://zenodo.org/badge/latestdoi/415842293)
+
 ## Dependencies
 
 Almost all of the code in this repository depends on [Numpy](https://numpy.org) and [Pandas](https://pandas.pydata.org).
