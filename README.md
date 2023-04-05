@@ -1,4 +1,4 @@
-# Code and data for ``Homology of homologous knotted proteins''
+# Code and data for "Homology of homologous knotted proteins"
 
 This repository is a companion to the paper "Homology of homologous knotted proteins". It contains the data analysed in the paper, as well as all novel Python code used to generate those data and to produce the accompanying figures.
 
